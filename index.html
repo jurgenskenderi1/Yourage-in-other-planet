@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="JScss.css" type="text/css"/>
+        <script src="newJSWeb.js"></script>
+        <title>How Old Are You ?</title>
+    </head>
+    <body onload="init()">
+        <div class="wrapper">
+            <div class="page">
+                <img src="https://dl.dropbox.com/s/wbxgneqf3xj5eor/Backgroung.jpg" 
+                     class="background" />
+                <div class="banner">
+                    <div class="title">
+                        HOW OLD<br>ARE YOU
+                    </div>
+                    <div class="instruction">
+                        Enter Your Date Of Birth
+                    </div>
+                    <div class="form">
+                        <select required id="date">
+                            <option value=""
+                                    disabled
+                                    selected
+                                    hidden>
+                                Date
+                            </option>
+                        </select>
+                        <select required id="month"
+                                oninput="setDate()">
+                            <option value=""
+                                    disabled
+                                    selected
+                                    hidden>
+                                Month
+                            </option>
+                        </select>
+                        <select required id="year"
+                                oninput="setDate()">
+                            <option value=""
+                                    disabled
+                                    selected
+                                    hidden>
+                                Year
+                            </option>
+                        </select>
+                    </div>
+                    <div class="mark-btn"
+                         onclick="submit()">
+                        ?
+                    </div>
+                    <div class="intro">
+                        Check what will be your age
+                        now in all different planets
+                    </div>
+                </div>
+            </div>
+            <!--Result Page-->
+            <div class="page hide" id="result">
+                <div class="head">
+                    <div class="back-btn"
+                         onclick="back()">
+                    </div>
+                    <div class="hint">
+                        Tap the Cards for More Details
+                    </div>
+                </div>
+                <div class="card" 
+                     onclick="openC(this)">
+                    <div class="wrap">
+                        <div class="planet">
+                            <img src="https://dl.dropbox.com/s/6v4cn2xffcmoygm/018-mercury.svg">
+                        </div>
+                        <div class="info">
+                            <span class="age">
+                                00.00
+                            </span>
+                            <span class="tag">
+                                YEARS
+                            </span>
+                        </div>
+                    </div>
+                    <div class="extra">
+                        <span>
+                            Planet Mercury
+                        </span>
+                        <br>
+                        No of Days in a Year
+                        <br>
+                        ( Orbital Period )
+                        <br>
+                        <span>
+                            88 Days
+                        </span>
+                        <br>
+                        Your Age In This Planet
+                        <br>
+                        <br>
+                        <span class="age">
+                            00.00
+                        </span>
+                        YEARS
+                        <br>
+                    </div>
+                </div>
+                <div class="card" 
+                     onclick="openC(this)">
+                    <div class="wrap">
+                        <div class="planet">
+                            <img src="https://dl.dropbox.com/s/ty3hpgxeps2e1lf/036-venus.svg">
+                        </div>
+                        <div class="info">
+                            <span class="age">
+                                00.00
+                            </span>
+                            <span class="tag">
+                                YEARS
+                            </span>
+                        </div>
+                    </div>
+                    <div class="extra">
+                        <span>
+                            Planet Venus
+                        </span>
+                        <br>
+                        No of Days in a Year
+                        <br>
+                        ( Orbital Period )
+                        <br>
+                        <span>
+                            225 Days
+                        </span>
+                        <br>
+                        Your Age In This Planet
+                        <br>
+                        <br>
+                        <span class="age">
+                            00.00
+                        </span>
+                        YEARS
+                        <br>
+                    </div>
+                </div>
+                <div class="card" 
+                     onclick="openC(this)">
+                    <div class="wrap">
+                        <div class="planet">
+                            <img src="https://dl.dropbox.com/s/vvs19kw86ofzh1e/006-planet-earth.svg">
+                        </div>
+                        <div class="info">
+                            <span class="age">
+                                00.00
+                            </span>
+                            <span class="tag">
+                                YEARS
+                            </span>
+                        </div>
+                    </div>
+                    <div class="extra">
+                        <span>
+                            Planet Earth
+                        </span>
+                        <br>
+                        No of Days in a Year
+                        <br>
+                        ( Orbital Period )
+                        <br>
+                        <span>
+                            365 Days
+                        </span>
+                        <br>
+                        Your Age In This Planet
+                        <br>
+                        <br>
+                        <span class="age">
+                            00.00
+                        </span>
+                        YEARS
+                        <br>
+                    </div>
+                </div>
+                <div class="card" 
+                     onclick="openC(this)">
+                    <div class="wrap">
+                        <div class="planet">
+                            <img src="https://dl.dropbox.com/s/k0z5v5wrtb0vprx/017-mars.svg">
+                        </div>
+                        <div class="info">
+                            <span class="age">
+                                00.00
+                            </span>
+                            <span class="tag">
+                                YEARS
+                            </span>
+                        </div>
+                    </div>
+                    <div class="extra">
+                        <span>
+                            Planet Mars
+                        </span>
+                        <br>
+                        No of Days in a Year
+                        <br>
+                        ( Orbital Period )
+                        <br>
+                        <span>
+                            687 Days
+                        </span>
+                        <br>
+                        Your Age In This Planet
+                        <br>
+                        <br>
+                        <span class="age">
+                            00.00
+                        </span>
+                        YEARS
+                        <br>
+                    </div>
+                </div>
+                <div class="card" 
+                     onclick="openC(this)">
+                    <div class="wrap">
+                        <div class="planet">
+                            <img src="https://dl.dropbox.com/s/ocaudjx6v92ieqv/012-jupiter.svg">
+                        </div>
+                        <div class="info">
+                            <span class="age">
+                                00.00
+                            </span>
+                            <span class="tag">
+                                YEARS
+                            </span>
+                        </div>
+                    </div>
+                    <div class="extra">
+                        <span>
+                            Planet Jupiter
+                        </span>
+                        <br>
+                        No of Days in a Year
+                        <br>
+                        ( Orbital Period )
+                        <br>
+                        <span>
+                            4333 Days
+                        </span>
+                        <br>
+                        Your Age In This Planet
+                        <br>
+                        <br>
+                        <span class="age">
+                            00.00
+                        </span>
+                        YEARS
+                        <br>
+                    </div>
+                </div>
+                <div class="card" 
+                     onclick="openC(this)">
+                    <div class="wrap">
+                        <div class="planet">
+                            <img src="https://dl.dropbox.com/s/12ullmh3wo1o3jg/028-saturn.svg">
+                        </div>
+                        <div class="info">
+                            <span class="age">
+                                00.00
+                            </span>
+                            <span class="tag">
+                                YEARS
+                            </span>
+                        </div>
+                    </div>
+                    <div class="extra">
+                        <span>
+                            Planet Saturn
+                        </span>
+                        <br>
+                        No of Days in a Year
+                        <br>
+                        ( Orbital Period )
+                        <br>
+                        <span>
+                            10756 Days
+                        </span>
+                        <br>
+                        Your Age In This Planet
+                        <br>
+                        <br>
+                        <span class="age">
+                            00.00
+                        </span>
+                        YEARS
+                        <br>
+                    </div>
+                </div>
+                <div class="card" 
+                     onclick="openC(this)">
+                    <div class="wrap">
+                        <div class="planet">
+                            <img src="https://dl.dropbox.com/s/6d1brcv3008rkum/035-uranus.svg">
+                        </div>
+                        <div class="info">
+                            <span class="age">
+                                00.00
+                            </span>
+                            <span class="tag">
+                                YEARS
+                            </span>
+                        </div>
+                    </div>
+                    <div class="extra">
+                        <span>
+                            Planet Uranus
+                        </span>
+                        <br>
+                        No of Days in a Year
+                        <br>
+                        ( Orbital Period )
+                        <br>
+                        <span>
+                            30688 Days
+                        </span>
+                        <br>
+                        Your Age In This Planet
+                        <br>
+                        <br>
+                        <span class="age">
+                            00.00
+                        </span>
+                        YEARS
+                        <br>
+                    </div>
+                </div>
+                <div class="card" 
+                     onclick="openC(this)">
+                    <div class="wrap">
+                        <div class="planet">
+                            <img src="https://dl.dropbox.com/s/im5jy2gtrcj3auv/022-neptune.svg">
+                        </div>
+                        <div class="info">
+                            <span class="age">
+                                00.00
+                            </span>
+                            <span class="tag">
+                                YEARS
+                            </span>
+                        </div>
+                    </div>
+                    <div class="extra">
+                        <span>
+                            Planet Neptune
+                        </span>
+                        <br>
+                        No of Days in a Year
+                        <br>
+                        ( Orbital Period )
+                        <br>
+                        <span>
+                            60193 Days
+                        </span>
+                        <br>
+                        Your Age In This Planet
+                        <br>
+                        <br>
+                        <span class="age">
+                            00.00
+                        </span>
+                        YEARS
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
