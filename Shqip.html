@@ -1,0 +1,396 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>JS</title>
+        <script src="code.js" type="text/javascript" charset="utf-8"></script>        
+        <link href="style.css" rel="stylesheet" type="text/css">
+    <script async custom-element="amp-auto-ads"
+        src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
+</script>
+
+    <title>Sa vjec jeni ?</title>
+</head>
+<body onload="init()">
+    <div class="wrapper">
+        <div class="page">
+            <img src="https://dl.dropbox.com/s/wbxgneqf3xj5eor/Backgroung.jpg" 
+            class="background" />
+            <div class="banner">
+                <div class="title">
+                    SA VJEC JENI
+                </div>
+                <h1> JS </h1>
+                <div class="instruction">
+                    Vendosni Ditelindjen tuaj
+                </div>
+                <div class="form">
+                    <select required id="date">
+                        <option value=""
+                        disabled
+                        selected
+                        hidden>
+                            Data
+                        </option>
+                    </select>
+                    <select required id="month"
+                    oninput="setDate()">
+                        <option value=""
+                        disabled
+                        selected
+                        hidden>
+                            Muaj
+                        </option>
+                    </select>
+                    <select required id="year"
+                    oninput="setDate()">
+                        <option value=""
+                        disabled
+                        selected
+                        hidden>
+                            Viti
+                        </option>
+                    </select>
+                </div>
+                <div class="mark-btn"
+                onclick="submit()">
+                    ?
+                </div>
+                <div class="intro">
+                   Shiko se cfar moshe do te kishit ne nje planet tjeter
+                    </div>
+            </div>
+        </div>
+        <!--Result Page-->
+        <div class="page hide" id="result">
+            <div class="head">
+                <div class="back-btn"
+                onclick="back()">
+                </div>
+                <div class="hint">
+                    Kliko mbi ikonat per me shum detaje
+                </div>
+            </div>
+            <div class="card" 
+            onclick="openC(this)">
+                <div class="wrap">
+                <div class="planet">
+                    <img src="https://dl.dropbox.com/s/6v4cn2xffcmoygm/018-mercury.svg">
+                </div>
+                <div class="info">
+                    <span class="age">
+                        00.00
+                    </span>
+                    <span class="tag">
+                        VJEC
+                    </span>
+                </div>
+                </div>
+                <div class="extra">
+                    <span>
+                        Planti Merrkurr
+                    </span>
+                    <br>
+                    Numri i diteve ne nje vit
+                    <br>
+                    ( Perjoda Orbitale )
+                    <br>
+                    <span>
+                        88 Dite
+                    </span>
+                    <br>
+                    Mosha juaj ne kete planet
+                    <br>
+                    <br>
+                    <span class="age">
+                        00.00
+                    </span>
+                    Vjec
+                    <br>
+                </div>
+            </div>
+            <div class="card" 
+            onclick="openC(this)">
+                <div class="wrap">
+                <div class="planet">
+                    <img src="https://dl.dropbox.com/s/ty3hpgxeps2e1lf/036-venus.svg">
+                </div>
+                <div class="info">
+                    <span class="age">
+                        00.00
+                    </span>
+                    <span class="tag">
+                        VJEC
+                    </span>
+                </div>
+                </div>
+                <div class="extra">
+                    <span>
+                        Planeti Venus
+                    </span>
+                    <br>
+                    Numri i diteve ne nje vit
+                    <br>
+                    ( Perjoda Orbitale )
+                    <br>
+                    <span>
+                        225 Dite
+                    </span>
+                    <br>
+                    Mosha juaj ne kete planet
+                    <br>
+                    <br>
+                    <span class="age">
+                        00.00
+                    </span>
+                    Vjec
+                    <br>
+                </div>
+            </div>
+            <div class="card" 
+            onclick="openC(this)">
+                <div class="wrap">
+                <div class="planet">
+                    <img src="https://dl.dropbox.com/s/vvs19kw86ofzh1e/006-planet-earth.svg">
+                </div>
+                <div class="info">
+                    <span class="age">
+                        00.00
+                    </span>
+                    <span class="tag">
+                        VJEC
+                    </span>
+                </div>
+                </div>
+                <div class="extra">
+                    <span>
+                        Planeti Toke
+                    </span>
+                    <br>
+                   Numri i diteve ne nje vit
+                    <br>
+                    ( Perjoda Orbitale )
+                    <br>
+                    <span>
+                        365 Dite
+                    </span>
+                    <br>
+                    Mosha juaj ne kete planet
+                    <br>
+                    <br>
+                    <span class="age">
+                        00.00
+                    </span>
+                    Vjec
+                    <br>
+                </div>
+            </div>
+            <div class="card" 
+            onclick="openC(this)">
+                <div class="wrap">
+                <div class="planet">
+                    <img src="https://dl.dropbox.com/s/k0z5v5wrtb0vprx/017-mars.svg">
+                </div>
+                <div class="info">
+                    <span class="age">
+                        00.00
+                    </span>
+                    <span class="tag">
+                        VJEC
+                    </span>
+                </div>
+                </div>
+                <div class="extra">
+                    <span>
+                        Planeti Mars
+                    </span>
+                    <br>
+                   Numri i diteve ne nje vit
+                    <br>
+                    ( Perjoda Orbitale )
+                    <br>
+                    <span>
+                        687 Dite
+                    </span>
+                    <br>
+                   Mosha juaj ne kete planet
+                    <br>
+                    <br>
+                    <span class="age">
+                        00.00
+                    </span>
+                    Vjec
+                    <br>
+                </div>
+            </div>
+            <div class="card" 
+            onclick="openC(this)">
+                <div class="wrap">
+                <div class="planet">
+                    <img src="https://dl.dropbox.com/s/ocaudjx6v92ieqv/012-jupiter.svg">
+                </div>
+                <div class="info">
+                    <span class="age">
+                        00.00
+                    </span>
+                    <span class="tag">
+                        VJEC
+                    </span>
+                </div>
+                </div>
+                <div class="extra">
+                    <span>
+                        Planeti Jupiter
+                    </span>
+                    <br>
+                    Numri i diteve ne nje vit
+                    <br>
+                    ( Perjoda Orbitale )
+                    <br>
+                    <span>
+                        4333 Dite
+                    </span>
+                    <br>
+                    Mosha juaj ne kete planet
+                    <br>
+                    <br>
+                    <span class="age">
+                        00.00
+                    </span>
+                    Vjec
+                    <br>
+                </div>
+            </div>
+            <div class="card" 
+            onclick="openC(this)">
+                <div class="wrap">
+                <div class="planet">
+                    <img src="https://dl.dropbox.com/s/12ullmh3wo1o3jg/028-saturn.svg">
+                </div>
+                <div class="info">
+                    <span class="age">
+                        00.00
+                    </span>
+                    <span class="tag">
+                        VJEC
+                    </span>
+                </div>
+                </div>
+                <div class="extra">
+                    <span>
+                        Planeti Saturn
+                    </span>
+                    <br>
+                    Numri i diteve ne nje vit
+                    <br>
+                    ( Perjoda Orbitale )
+                    <br>
+                    <span>
+                        10756 Dite
+                    </span>
+                    <br>
+                   Mosha juaj ne kete planet
+                    <br>
+                    <br>
+                    <span class="age">
+                        00.00
+                    </span>
+                    Vjec
+                    <br>
+                </div>
+            </div>
+            <div class="card" 
+            onclick="openC(this)">
+                <div class="wrap">
+                <div class="planet">
+                    <img src="https://dl.dropbox.com/s/6d1brcv3008rkum/035-uranus.svg">
+                </div>
+                <div class="info">
+                    <span class="age">
+                        00.00
+                    </span>
+                    <span class="tag">
+                        VJEC
+                    </span>
+                </div>
+                </div>
+                <div class="extra">
+                    <span>
+                        Planeti Uranus
+                    </span>
+                    <br>
+                   Numri i diteve ne nje vit
+                    <br>
+                    ( Perjoda Orbitale )
+                    <br>
+                    <span>
+                        30688 Dite
+                    </span>
+                    <br>
+                    Mosha juaj ne kete planet
+                    <br>
+                    <br>
+                    <span class="age">
+                        00.00
+                    </span>
+                    Vjec
+                    <br>
+                </div>
+            </div>
+            <div class="card" 
+            onclick="openC(this)">
+                <div class="wrap">
+                <div class="planet">
+                    <img src="https://dl.dropbox.com/s/im5jy2gtrcj3auv/022-neptune.svg">
+                </div>
+                <div class="info">
+                    <span class="age">
+                        00.00
+                    </span>
+                    <span class="tag">
+                        VJEC
+                    </span>
+                </div>
+                </div>
+                <div class="extra">
+                    <span>
+                        Planeti Neptun
+                    </span>
+                    <br>
+                   Numri i diteve ne nje vit
+                    <br>
+                    ( Perjoda Orbitale )
+                    <br>
+                    <span>
+                        60193 Dite
+                    </span>
+                    <br>
+                    Mosha juaj ne kete planet
+                    <br>
+                    <br>
+                    <span class="age">
+                        00.00
+                    </span>
+                    Vjec
+                    <br>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- adsjs -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3227825114618307"
+     data-ad-slot="5415642663"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+    <amp-auto-ads type="adsense"
+              data-ad-client="ca-pub-3227825114618307">
+</amp-auto-ads>
+</body>
+</html>
